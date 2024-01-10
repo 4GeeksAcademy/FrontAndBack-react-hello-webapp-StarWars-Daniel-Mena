@@ -20,17 +20,21 @@ export const Home = () => {
 	return (
 		<div className="mt-5">
 			<h1 className="text-danger m-3">Characters</h1>
-			<ul className="list-group d-flex flex-row flex-wrap" id="contact-list">
-			{store.listCharacter.map((item) => (<Character key={item.uid} id={item.uid} name={item.name}/>))}
+			<ul className="list-group d-flex flex-row overflow-auto gap-3 p-3" id="contact-list">
+				{store.listCharacter.map((item) => (
+					<li className="list-group" key={item.uid}>
+						<Character  id={item.uid} name={item.name}/>
+					</li>
+			))}
 			</ul>
-			<h1 className="text-danger m-3">Planets</h1>
+			{/* <h1 className="text-danger m-3">Planets</h1>
 			<span className="list-group d-flex flex-row flex-wrap" id="contact-list">
 			{store.listPlanet.map((item) => (<Planet id={item.uid} name={item.name}/>))}
 			</span>
 			<h1 className="text-danger m-3">Vehicles</h1>
 			<ul className="list-group pull-down d-flex flex-wrap d-inline-flex flex-row m-3" id="contact-list">
 			{store.listVehicle.map((item) => (<Vehicle id={item.uid} name={item.name}/>))}
-			</ul>
+			</ul> */}
 		
 		</div>
 	)	
