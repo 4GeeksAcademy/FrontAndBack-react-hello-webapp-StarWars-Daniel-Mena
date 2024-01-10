@@ -35,10 +35,14 @@ export const Home = () => {
 					</li>	
 				))}
 			</ul>
-			{/* <h1 className="text-danger m-3">Vehicles</h1>
-			<ul className="list-group pull-down d-flex flex-wrap d-inline-flex flex-row m-3" id="contact-list">
-			{store.listVehicle.map((item) => (<Vehicle id={item.uid} name={item.name}/>))}
-			</ul> */}
+			<h1 className="text-danger m-3">Vehicles</h1>
+			<ul className="list-group d-flex flex-row overflow-auto gap-3 p-3 mb-5" id="contact-list">
+				{store.listVehicle.map((item) => (
+					<li className="list-group" key={item.uid}>
+						<Vehicle id={item.uid} name={item.name}/>
+					</li>
+				))}
+			</ul>
 		
 		</div>
 	)	
