@@ -12,7 +12,7 @@ export const InformationPlanets = (props) => {
 					<p>{props.description}</p>
 				</div>
 			</div>
-			<div className="text-danger d-flex flex-row justify-content-between mt-3">
+			<div className="text-danger d-flex flex-row justify-content-between mt-3 border-top border-danger pt-2">
 				<div className="d-flex flex-column align-items-center">
 					<p>Climate</p>
 					<p>{props.climate}</p>
