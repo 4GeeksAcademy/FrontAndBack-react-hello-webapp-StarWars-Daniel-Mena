@@ -7,7 +7,7 @@ export const InformationCharacter = (props) => {
 		<div className="m-auto col-12 d-flex flex-column">
 			<div className="d-flex flex-row gap-3">
 				<img src="https://vasavihospitals.com/public/uploads/images/632ae685ed739.gif" className="col-6" alt="Character img"/>
-				<div className="col-6">
+				<div className="col-6 text-white">
 					<h1>{props.name}</h1>
 					<p>{props.description}</p>
 				</div>
