@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
-export const InformationCharacter = (props) => {
+export const InformationPlanets = (props) => {
 	return (
 		<div className="m-auto col-12 d-flex flex-column">
 			<div className="d-flex flex-row gap-3">
@@ -14,43 +14,43 @@ export const InformationCharacter = (props) => {
 			</div>
 			<div className="text-danger d-flex flex-row justify-content-between mt-3">
 				<div className="d-flex flex-column align-items-center">
-					<p>Gender</p>
-					<p>{props.gender}</p>
+					<p>Climate</p>
+					<p>{props.climate}</p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Height</p>
-					<p>{props.height}</p>
+					<p>Diameter</p>
+					<p>{props.diameter}</p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Mass</p>
-					<p>{props.mass}</p>
+					<p>Gravity</p>
+					<p>{props.gravity}</p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Hair Color</p>
-					<p>{props.hair_color}</p>
+					<p>Terrain</p>
+					<p>{props.terrain}</p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Skin Color</p>
-					<p>{props.skin_color}</p>
+					<p>Orbital Period</p>
+					<p>{props.orbital_period}</p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Eye Color</p>
-					<p>{props.eye_color}</p>
+					<p>Rotation Period</p>
+					<p>{props.rotation_period}</p>
 				</div>			
 			</div>
 		</div>
 	);
 };
 
-InformationCharacter.propTypes = { 
+InformationPlanets.propTypes = { 
 	name: PropTypes.string,
 	description: PropTypes.string,
-	gender: PropTypes.string,
-	height: PropTypes.string,
-	mass: PropTypes.string,
-	hair_color: PropTypes.string,
-	skin_color: PropTypes.string,
-	eye_color: PropTypes.string
+	climate: PropTypes.string,
+	diameter: PropTypes.string,
+	gravity: PropTypes.string,
+	terrain: PropTypes.string,
+	orbital_period: PropTypes.string,
+	rotation_period: PropTypes.string
 }
 
 
