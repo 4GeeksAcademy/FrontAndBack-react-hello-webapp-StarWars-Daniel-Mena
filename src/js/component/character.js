@@ -27,7 +27,7 @@ export const Character = (props) => {
 	}
 
 	return (
-		<div className="card" style={{width: "18rem"}}>
+		<div className="card border border-warning" style={{width: "18rem"}}>
 			<img src="https://www.servithermic.cl/images/400X200.gif" className="card-img-top" alt="Character img"/>
 			<div className="card-body">
 				<h5 className="card-title mb-5">{props.name}</h5>
