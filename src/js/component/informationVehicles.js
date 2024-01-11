@@ -14,28 +14,28 @@ export const InformationVehicles = (props) => {
 			</div>
 			<div className="text-danger d-flex flex-row justify-content-between mt-3 border-top border-danger pt-2">
 				<div className="d-flex flex-column align-items-center">
-					<p>Model</p>
-					<p>{props.model}</p>
+					<p><strong>Model</strong></p>
+					<p><strong>{props.model}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Length</p>
-					<p>{props.length}</p>
+					<p><strong>Length</strong></p>
+					<p><strong>{props.length}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Manufacturer</p>
-					<p>{props.manufacturer}</p>
+					<p><strong>Manufacturer</strong></p>
+					<p><strong>{props.manufacturer}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Cargo Capacity</p>
-					<p>{props.cargo_capacity}</p>
+					<p><strong>Cargo Capacity</strong></p>
+					<p><strong>{props.cargo_capacity}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Crew</p>
-					<p>{props.crew}</p>
+					<p><strong>Crew</strong></p>
+					<p><strong>{props.crew}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Max Atmosphering Speed</p>
-					<p>{props.max_atmosphering_speed}</p>
+					<p><strong>Max Atmosphering Speed</strong></p>
+					<p><strong>{props.max_atmosphering_speed}</strong></p>
 				</div>			
 			</div>
 		</div>

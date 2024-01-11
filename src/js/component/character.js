@@ -9,6 +9,20 @@ export const Character = (props) => {
 
 	const [bgButton, setBgButton] = useState(false);
 	const [bgIcon, setBgIcon] = useState(false)
+	const [selcFav, setSelecFav] = useState(false)
+
+	const { store, actions } = useContext(Context);
+
+	useEffect(()=>{
+		if (store.favourite.includes(props.name)) {
+			setSelecFav(true)
+			setBgIcon(true)
+		}
+		else{
+			setSelecFav(false)
+			setBgIcon(false)
+		}
+	}, [store.favourite])
 
 	const buttonOver = () =>{
 		setBgButton(true)
@@ -23,7 +37,9 @@ export const Character = (props) => {
 	}
 
 	const iconOut = () =>{
-		setBgIcon(false)
+		if(selcFav===false){
+			setBgIcon(false)
+		}
 	}
 
 	return (
@@ -37,7 +53,7 @@ export const Character = (props) => {
 							Learn More!
 						</button>
 					</Link>
-					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut}></i>
+					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut} onClick={() => {actions.addFavourite(props.name)}}></i>
 				</div>
 			</div>
 		</div>

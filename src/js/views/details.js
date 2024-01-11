@@ -30,8 +30,6 @@ export const Details = (props) => {
 		actions.getDetail(`https://www.swapi.tech/api/${params.category}/${params.theid}`);
 
 	}, []);
-	
-	console.log(store.listDetails);	
 
 	return (
 		<div>

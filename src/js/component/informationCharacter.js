@@ -14,28 +14,28 @@ export const InformationCharacter = (props) => {
 			</div>
 			<div className="text-danger strong d-flex flex-row justify-content-between mt-3 border-top border-danger pt-2">
 				<div className="d-flex flex-column align-items-center">
-					<p>Gender</p>
-					<p>{props.gender}</p>
+					<p><strong>Gender</strong></p>
+					<p><strong>{props.gender}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Height</p>
-					<p>{props.height}</p>
+					<p><strong>Height</strong></p>
+					<p><strong>{props.height}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Mass</p>
-					<p>{props.mass}</p>
+					<p><strong>Mass</strong></p>
+					<p><strong>{props.mass}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Hair Color</p>
-					<p>{props.hair_color}</p>
+					<p><strong>Hair Color</strong></p>
+					<p><strong>{props.hair_color}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Skin Color</p>
-					<p>{props.skin_color}</p>
+					<p><strong>Skin Color</strong></p>
+					<p><strong>{props.skin_color}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Eye Color</p>
-					<p>{props.eye_color}</p>
+					<p><strong>Eye Color</strong></p>
+					<p><strong>{props.eye_color}</strong></p>
 				</div>			
 			</div>
 		</div>

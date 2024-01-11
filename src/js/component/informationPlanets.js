@@ -14,28 +14,28 @@ export const InformationPlanets = (props) => {
 			</div>
 			<div className="text-danger d-flex flex-row justify-content-between mt-3 border-top border-danger pt-2">
 				<div className="d-flex flex-column align-items-center">
-					<p>Climate</p>
-					<p>{props.climate}</p>
+					<p><strong>Climate</strong></p>
+					<p><strong>{props.climate}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Diameter</p>
-					<p>{props.diameter}</p>
+					<p><strong>Diameter</strong></p>
+					<p><strong>{props.diameter}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Gravity</p>
-					<p>{props.gravity}</p>
+					<p><strong>Gravity</strong></p>
+					<p><strong>{props.gravity}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Terrain</p>
-					<p>{props.terrain}</p>
+					<p><strong>Terrain</strong></p>
+					<p><strong>{props.terrain}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Orbital Period</p>
-					<p>{props.orbital_period}</p>
+					<p><strong>Orbital Period</strong></p>
+					<p><strong>{props.orbital_period}</strong></p>
 				</div>
 				<div className="d-flex flex-column align-items-center">
-					<p>Rotation Period</p>
-					<p>{props.rotation_period}</p>
+					<p><strong>Rotation Period</strong></p>
+					<p><strong>{props.rotation_period}</strong></p>
 				</div>			
 			</div>
 		</div>

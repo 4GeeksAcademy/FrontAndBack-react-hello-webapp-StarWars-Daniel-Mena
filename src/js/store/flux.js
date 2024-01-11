@@ -5,7 +5,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			listPlanet: [],
 			listVehicle: [],
 			listDetails: [],
-			listDescription: []
+			listDescription: [],
+			favourite: [],
+			numFavoutire: 0
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -43,6 +45,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.log(error);
 					});
+			},
+
+			addFavourite: (item)=>{
+
+				if (!getStore().favourite.includes(item)){
+					setStore({favourite: getStore().favourite.concat(item)})
+					setStore({numFavoutire: getStore().favourite.length})
+				}
+				
+			},
+
+			deleteFavourite: (i)=>{
+				setStore({favourite: getStore().favourite.filter((item) => item != i)});
+				setStore({numFavoutire: getStore().favourite.length})
 			}
 
 		}

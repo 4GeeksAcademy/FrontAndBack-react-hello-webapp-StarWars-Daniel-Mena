@@ -10,6 +10,8 @@ export const Planet = (props) => {
 	const [bgButton, setBgButton] = useState(false);
 	const [bgIcon, setBgIcon] = useState(false)
 
+	const { actions } = useContext(Context);
+
 	const buttonOver = () =>{
 		setBgButton(true)
 	}
@@ -38,7 +40,7 @@ export const Planet = (props) => {
 							Learn More!
 						</button>
 					</Link>
-					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut}></i>
+					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut} onClick={() => actions.addFavourite(props.name)}></i>
 				</div>
 				
 			</div>
