@@ -14,7 +14,10 @@ export const Character = (props) => {
 	const { store, actions } = useContext(Context);
 
 	useEffect(()=>{
-		if (store.favourite.includes(props.name)) {
+		
+		const nameFavoritos = store.favourite.map(item => item.name)
+
+		if(nameFavoritos.includes(props.name)) {
 			setSelecFav(true)
 			setBgIcon(true)
 		}
@@ -22,6 +25,7 @@ export const Character = (props) => {
 			setSelecFav(false)
 			setBgIcon(false)
 		}
+		
 	}, [store.favourite])
 
 	const buttonOver = () =>{
@@ -43,7 +47,7 @@ export const Character = (props) => {
 	}
 
 	return (
-		<div className="card border border-warning" style={{width: "18rem"}}>
+		<div className="card border border-warning border-3">
 			<img src="https://www.servithermic.cl/images/400X200.gif" className="card-img-top" alt="Character img"/>
 			<div className="card-body">
 				<h5 className="card-title mb-5">{props.name}</h5>
@@ -53,7 +57,7 @@ export const Character = (props) => {
 							Learn More!
 						</button>
 					</Link>
-					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut} onClick={() => {actions.addFavourite(props.name)}}></i>
+					<i className={`fa fa-2x fa-heart mt-1 me-1 ${bgIcon==false ? "text-primary": "text-warning"}`} onMouseOver={iconOver} onMouseOut={iconOut} onClick={() => {actions.addFavourite(props.name, url)}}></i>
 				</div>
 			</div>
 		</div>

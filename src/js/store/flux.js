@@ -47,13 +47,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			addFavourite: (item)=>{
-
-				if (!getStore().favourite.includes(item)){
-					setStore({favourite: getStore().favourite.concat(item)})
+			addFavourite: (item, url)=>{
+				const itemFav = getStore().favourite.map(nombre => nombre.name)
+				if (!itemFav.includes(item)){
+					setStore({favourite: getStore().favourite.concat({name: item, url: url})})
 					setStore({numFavoutire: getStore().favourite.length})
 				}
-				
+				console.log(getStore().favourite);
 			},
 
 			deleteFavourite: (i)=>{
