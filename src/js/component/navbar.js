@@ -15,7 +15,7 @@ export const Navbar = () => {
 				</Link>
 				<div className="d-flex flex-row justify-content-between align-items-center">
 					<div className="btn-group" role="group">
-						<button id="btnGroupDrop1" type="button" className="btn btn-primary dropdown-toggle me-5 gap-2" data-bs-toggle="dropdown" aria-expanded="false">
+						<button id="btnGroupDrop1" type="button" className="btn btn-primary dropdown-toggle me-5 gap-2" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 						<span className="me-1">Favourites</span><span className="me-1 px-1 bg-secondary bg-opacity-75 rounded-circle">{store.numFavoutire}</span> 
 						</button>
 						<ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">

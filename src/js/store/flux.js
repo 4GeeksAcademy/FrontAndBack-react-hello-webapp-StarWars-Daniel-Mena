@@ -53,7 +53,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({favourite: getStore().favourite.concat({name: item, url: url})})
 					setStore({numFavoutire: getStore().favourite.length})
 				}
-				console.log(getStore().favourite);
 			},
 
 			deleteFavourite: (i)=>{
