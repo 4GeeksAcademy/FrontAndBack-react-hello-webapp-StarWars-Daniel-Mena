@@ -10,6 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Details } from "./views/details";
+import { Login } from "./views/login";
 
 //create your first component
 const Layout = () => {
@@ -23,7 +24,8 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar className="position-fixed"/>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Login />} />
+						<Route path="/home" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/details/:category/:theid" element={<Details />} />
 						<Route path="/single/:category/:theid" element={<Single />} />

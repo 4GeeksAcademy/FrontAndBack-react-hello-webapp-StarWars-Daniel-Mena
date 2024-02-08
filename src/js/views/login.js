@@ -1,0 +1,22 @@
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext.js";
+import "../../styles/home.css";
+import { Form_login } from "../component/form_login.js";
+
+
+
+
+export const Login = () => {
+
+	const { store, actions } = useContext(Context);
+
+	useEffect(() => {
+
+	}, []);
+	
+	return (
+		<div className="">
+            <Form_login/>
+		</div>
+	)	
+};
