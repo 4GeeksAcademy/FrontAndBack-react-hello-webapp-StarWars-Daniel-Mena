@@ -12,7 +12,7 @@ export const InformationVehicles = (props) => {
 	return (
 		<div className="m-auto col-12 d-flex flex-column">
 			<div className="d-flex flex-row gap-3">
-				<img src="https://vasavihospitals.com/public/uploads/images/632ae685ed739.gif" className="col-6" alt="Character img"/>
+				<img src={props.img} className="col-6" alt="Character img"/>
 				<div className="col-6 text-white">
 					<h1>{props.name}</h1>
 					<p>{props.description}</p>
@@ -44,7 +44,7 @@ export const InformationVehicles = (props) => {
 					<p><strong>{props.max_atmosphering_speed}</strong></p>
 				</div>			
 			</div>
-			<button type="button" className="btn btn-warning col-xl-2 col-lg-2 col-md-4 col-6 m-auto mt-3" onClick={() => {actions.addFavourite(props.name, url)}}>Add favourite</button>
+			<button type="button" className="btn btn-warning col-xl-2 col-lg-2 col-md-4 col-6 m-auto mt-3" onClick={() => {actions.addFavouriteVehicle(props.id, props.name, url)}}>Add favourite</button>
 		</div>
 	);
 };

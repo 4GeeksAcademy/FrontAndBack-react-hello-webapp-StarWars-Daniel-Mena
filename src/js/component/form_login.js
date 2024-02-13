@@ -15,9 +15,11 @@ export const Form_login = () => {
 		event.preventDefault();
 		if (email != "" && password != "") {
            let loged =  await actions.login(email, password)
-           console.log(loged);
            if (loged) {
                 navigate("/home")
+           }
+           else{
+             window.alert("Error al introducir usuario o contraseña");
            }
 
 		} else {

@@ -23,7 +23,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-1 bg-transparent">
 			<div className="d-flex flex-row justify-content-between align-items-center">
-				<Link to="/login">
+				<Link to="/home">
 				<img className="col-xl-2 col-lg-2 col-md-4 col-6 ms-3" src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG34.png" />
 				</Link>
 				<div className={user}>
@@ -35,16 +35,16 @@ export const Navbar = () => {
 							{store.numFavoutire===0 ? <p className="d-flex justify-content-center mb-0">(empty)</p> : store.favourite.map((item, index) => (
 								<li className="d-flex flex-row flex-nowrap justify-content-between" key={index}>
 									<Link to={item.url}>
-										<p className="dropdown-item flex-shrink-1">{item.name}</p>
+										<p className="dropdown-item flex-shrink-1">{item.info.name}</p>
 									</Link>
-									<i className="fa fa-trash m-2" onClick={()=>actions.deleteFavourite(item)}></i>
+									<i className="fa fa-trash m-2" onClick={()=>actions.deleteFavourite(item.id)}></i>
 								</li>	
 							))}
 						</ul>
 					</div>
 					<div className="btn-group" role="group">
 						<button id="btnGroupDro" type="button" className="btn btn-primary dropdown-toggle me-5 gap-2" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="true">
-						<i class="fa fa-user"></i> 
+						<i className="fa fa-user"></i> 
 						</button>
 						<ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
 							<li className="dropdown-item d-flex flex-row flex-nowrap justify-content-between" onClick={()=>closeSession()}>Cerrar Sesión</li>

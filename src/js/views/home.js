@@ -15,6 +15,7 @@ export const Home = () => {
 		actions.getCharacter();
 		actions.getPlanet();
 		actions.getVehicle();
+		actions.getFavourite();
 	}, []);
 	
 	return (
@@ -25,8 +26,8 @@ export const Home = () => {
 			</div>
 			<ul className="list-group d-flex flex-row overflow-auto mb-5" id="contact-list">
 				{store.listCharacter.map((item) => (
-					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.uid}>
-						<Character  id={item.uid} name={item.name}/>
+					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.id}>
+						<Character  id={item.id} name={item.name} img={item.url_img}/>
 					</li>
 			))}
 			</ul>
@@ -36,8 +37,8 @@ export const Home = () => {
 			</div>
 			<ul className="list-group d-flex flex-row overflow-auto mb-5" id="contact-list">
 				{store.listPlanet.map((item) => (
-					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.uid}>
-						<Planet id={item.uid} name={item.name}/>
+					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.id}>
+						<Planet id={item.id} name={item.name} img={item.url_img}/>
 					</li>	
 				))}
 			</ul>
@@ -47,8 +48,8 @@ export const Home = () => {
 			</div>
 			<ul className="list-group d-flex flex-row overflow-auto mb-5" id="contact-list">
 				{store.listVehicle.map((item) => (
-					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.uid}>
-						<Vehicle id={item.uid} name={item.name}/>
+					<li className="list-group col-xl-3 col-lg-4 col-md-6 col-12 mb-2 pe-2" key={item.id}>
+						<Vehicle id={item.id} name={item.name} img={item.url_img}/>
 					</li>
 				))}
 			</ul>
